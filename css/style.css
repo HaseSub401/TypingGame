@@ -1,0 +1,124 @@
+@font-face{
+    font-family:'DIGITAL-7';
+    src: url('../digital-7/digital-7.ttf');
+}
+
+
+/*html, body*/
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 62.5%; /* 1rem = 10px */
+    font-family: 'Abhaya Libre', serif;
+}
+
+/* container */
+.container {
+    margin: 2rem;
+    border: 1rem solid black;
+    border-radius: 12.5%;
+}
+
+h1 {
+    font-size: 8.5rem;
+    font-weight: bold;
+    letter-spacing: 0.22rem;
+    text-align: center;
+    margin: 5rem 0 4rem;
+    /* color: red; */
+}
+
+/* timer */
+#timer {
+    width: 23.728rem;
+    height: 12rem;
+    margin: 5rem auto;
+    padding: 0 4rem;
+    background: rgba(255, 255, 255, 1);
+    position: relative;
+}
+
+#timer::after {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    bottom: -1rem;
+    left: -1rem;
+    background-image: repeating-linear-gradient(45deg, red, red 1rem, black 1.5rem, black 2.5rem);
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+#display {
+    font-weight: bold;
+    color: red;
+    height: 4rem;
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#clock {
+    height: 7.5rem;
+    font-family:'DIGITAL-7';
+    font-size: 7.5rem;
+    line-height: 7.5rem;
+    margin-top: 1.5rem;
+    position: absolute;
+    top: 3rem; 
+    left: calc(50% - 23.728rem / 2);
+}
+
+
+/* main */
+#main {
+    text-align: center;
+    font-size: 7rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.bracket {
+    color: red;
+}
+
+#typed {
+    color: red;
+}
+
+/* form */
+form {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+input {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 4.5rem 1.5rem 0;
+    padding: 0.4rem 1.4rem;
+    border: 0.2rem solid black;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+    background: rgba(243, 82, 23, 1);
+}
+
+input:hover {
+    cursor: pointer;
+    background: rgba(243, 82, 23, 0.8);
+}
+
+input:focus {
+    box-shadow: none;
+    position: relative;
+    top: 0.4rem;
+    left: 0.4rem;
+    outline: black; 
+}
